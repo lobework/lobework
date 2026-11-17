@@ -1,0 +1,29 @@
+[project]
+name = "bubble-sort"
+version = "0.1.0"
+description = "极简 Python 项目：冒泡排序的实现与测试"
+readme = "README.md"
+requires-python = ">=3.9"
+authors = [{ name = "lobework" }]
+keywords = ["sorting", "bubble-sort", "algorithms"]
+classifiers = [
+    "Programming Language :: Python :: 3",
+    "Topic :: Education",
+]
+
+[project.optional-dependencies]
+dev = ["pytest>=7.0"]
+
+[project.scripts]
+bubble-sort = "bubble_sort:main"
+
+[build-system]
+requires = ["setuptools>=61"]
+build-backend = "setuptools.build_meta"
+
+[tool.setuptools]
+py-modules = ["bubble_sort"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+addopts = "-q"
